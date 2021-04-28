@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  height: 100%;
+}
+
+#root {
+  background: linear-gradient(90deg, #f598a8, #f6edb2);
+}
+
+.app {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 10px;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 60% 15% 25%;
+  margin-bottom: 20px;
+}
+
+input[name="todo_input"] {
+    height: 100%;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border: 1px solid #ededed;
+}
+
+input:focus {
+  border: 1px solid orange;
+  transition: 0.5s;
+  outline: none;
+}
+
+.btn_add {
+  margin: 0 10px;
+  border: 0;
+  background-color: orange;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  transition: .1s;
+}
+
+.btn_add:hover {
+  background-color: rgb(25, 189, 25);
+  transition: 1s;
+}
+
+.todo_completed {
+  text-decoration: line-through;
+  opacity: 0.2;
+}
+
+.todos li {
+  display: grid;
+  grid-template-columns: 80% 10% 10%;
+  background-color: #ededed;
+  align-items: center;
+  padding-left: 10px;
+  font-weight: 600;
+}
+
+.todos li:hover .todo_btn_trash {
+  opacity: 1;
+  transition: 0.2s;
+  background-color: rgb(255, 45, 45);
+}
+
+.todos li:hover .todo_btn_completed {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.todos li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.todo_btn_trash {
+  background-image: url('./trash.img');
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  cursor: pointer;
+  opacity: 0.1;
+  width: 100%;
+  background-position-x: center;
+  transition: .1s;
+}
+
+.todo_btn_completed {
+  font-size: 30px;
+  border: 0;
+  cursor: pointer;
+  opacity: 0.1;
+  transition: .1s;
+}
+
+select {
+  text-align-last: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.fade {
+  transform: translateY(8rem) rotate(20deg);
+  transition: .5s;
+  opacity: 0;
+}
